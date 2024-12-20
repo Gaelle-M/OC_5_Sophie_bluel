@@ -15,12 +15,13 @@ document.querySelector('.form-login').addEventListener('submit', async function(
     };
 
     try {
-        const response = await fetch('http://localhost:5678/api/login', {
+        const response = await fetch('http://localhost:5678/api/users/login', {
             method: 'POST',
+            body: JSON.stringify(formData),
             headers: {
                 'Content-Type': 'application/json' 
-            },
-            body: JSON.stringify(formData) 
+            }
+            
         });
 
      

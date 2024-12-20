@@ -49,15 +49,15 @@ function displayGallery(works) {
     });
 }
 
-//Fonction pour afficher les catégories
 function displayCategories(categories) {
     const categoryContainer = document.querySelector('.categories');
 
     categoryContainer.innerHTML = '';
 
-    //Bouton "tous"
+    // Bouton "tous"
     const allCategoriesButton = document.createElement('button');
     allCategoriesButton.textContent = 'Tous';
+    allCategoriesButton.classList.add('category-button'); 
     allCategoriesButton.addEventListener('click', () => filterGalleryByCategory(0)); 
     categoryContainer.appendChild(allCategoriesButton);
 
@@ -66,6 +66,7 @@ function displayCategories(categories) {
         const categoryElement = document.createElement('button');
         categoryElement.textContent = category.name;
         categoryElement.dataset.id = category.id;
+        categoryElement.classList.add('category-button'); 
 
         categoryElement.addEventListener('click', () => filterGalleryByCategory(category.id));
         categoryContainer.appendChild(categoryElement);
