@@ -34,6 +34,10 @@ body {
 ol, ul {
 	list-style: none;
 }
+a {
+	color: #000;
+	text-decoration: none;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -184,5 +188,27 @@ footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
+}
+
+/*** LOGIN ***/
+#contact {
+	margin: 100px auto;
+}
+#contact form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#contact input {
+	width: 380px;
+}
+#contact a {
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+}
+#contact input[type="submit"] {
+	width: 180px;
+	cursor: pointer;
 }
 
