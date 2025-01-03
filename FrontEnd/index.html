@@ -8,6 +8,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
@@ -35,7 +36,20 @@
 		</article>
 	</section>
 	<section id="portfolio">
+		<div class="container-title-icon">
 		<h2>Mes Projets</h2>
+
+		<a href="#modal1" class="js-modal"><i class="fa-regular fa-pen-to-square"></i>Modifier</a>
+       </div>
+
+	   <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
+		<div class="modal-wrapper js-modal-stop">
+			<button class="js-modal-close">Fermer la boite modal</button>
+			<h1 id="titlemodal">Gallerie photo</h1>
+			<button>Ajouter une photo</button>
+		</div>
+
+	   </aside>
 
 		<div class="categories"></div>
 		<div class="gallery"></div>
