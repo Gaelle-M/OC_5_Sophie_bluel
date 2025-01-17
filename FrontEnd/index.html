@@ -9,16 +9,20 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
 <header>
+	</div>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
 			<a href="./index.html"><li>projets</li></a>
 			<li>contact</li>
-			<a href="./login.html"><li>login</li></a>
+			<a id="auth-link" href="./login.html"><li>login</li></a> <!-- Lien login/log out -->
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -39,19 +43,43 @@
 		<div class="container-title-icon">
 		<h2>Mes Projets</h2>
 
-		<a href="#modal1" class="js-modal"><i class="fa-regular fa-pen-to-square"></i>Modifier</a>
+		<a href="#modal1" class="js-modal" id="edit-link" style="display: none;">
+			<i class="fa-regular fa-pen-to-square"></i>Modifier
+		</a>
        </div>
 
+	   <!--Modal 1-->
 	   <aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
 		<div class="modal-wrapper js-modal-stop">
-			<button class="js-modal-close">Fermer la boite modal</button>
-			<h1 id="titlemodal">Gallerie photo</h1>
-			<button>Ajouter une photo</button>
+			<div class="container-button-close">
+			  <button class="js-modal-close"><i class="fa-solid fa-xmark"></i></button>
+		    </div>
+			<h3 id="titlemodal">Gallerie photo</h3>
+			<div class="container-photo"></div>
+			<button id="open-add-photo-modal" class="js-open-modal2">Ajouter une photo</button>
 		</div>
-
 	   </aside>
 
-		<div class="categories"></div>
+	   <!-- Seconde modal ajout de photo-->
+	   <aside id="modal2" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
+		<div class="modal-wrapper js-modal-stop">
+			<div class="container-button-close">
+				<button class="js-modal-close" id="close-modal-2"><i class="fa-solid fa-xmark"></i></button>
+		    </div>
+			<h3 id="titlemodal">Ajout photo</h3>
+			<form id="add-photo-form">
+				<input type="file" id="image" name="image" accept="image/png, image/jpeg" required />
+				<label for="title">Titre</label>
+				<input type="text" name="title" id="title" required />
+				<label for="category">Catégorie</label>
+				<select name="category" id="category" required>
+				</select>
+				<button type="submit">Valider</button>
+			  </form>
+		</div>
+	   </aside>
+
+	   <div class="categories" id="categories-section"></div>
 		<div class="gallery"></div>
 
 	</section>
@@ -78,5 +106,6 @@
 	</nav>
 </footer>
 <script src="./assets/script.js"></script>
+<script src="./assets/login.js"></script>
 </body>
 </html>
