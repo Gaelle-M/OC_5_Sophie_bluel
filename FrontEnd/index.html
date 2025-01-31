@@ -70,14 +70,16 @@
 			<h3 id="titlemodal">Ajout photo</h3>
 			<form id="add-photo-form">
 				<div class="ajout-photo">
-				  <i class="fa-regular fa-image"></i>
-				  <label for="image" class="custom-file-upload">+ Ajouter photo</label>
-                  <input type="file" id="image" name="image" accept="image/png, image/jpeg" required />
-				  <p>jpg, png : 4mo max</p>
-			    </div>
+					<i class="fa-regular fa-image"></i>
+					<label for="image" class="custom-file-upload">+ Ajouter photo</label>
+					<input type="file" id="image" name="image" accept="image/png, image/jpeg" required />
+					<p>jpg, png : 4mo max</p>
+				  </div>
+				  
 				<div class="container-input">
 				  <label for="title">Titre</label>
-				  <input type="text" name="title" id="title" required />
+				  <input type="text" list="project-titles" id="title" name="title" required/>
+                  <datalist id="project-titles"></datalist>
 				  <label for="category">Catégorie</label>
 				  <select name="category" id="category" required>
 				  </select>

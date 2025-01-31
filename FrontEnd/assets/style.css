@@ -474,6 +474,16 @@ button-trash {
     color: #6C6C6C;
 }
 
+button[type="submit"]:disabled {
+    background-color: #A7A7A7 !important;
+    border: none !important;
+    cursor: not-allowed;
+  }
+  
+  button[type="submit"]:not(:disabled) {
+    background-color: #1D6154;
+    cursor: pointer;
+  }
 /*** Formulaire***/
 #contact {
     width: 50%;
