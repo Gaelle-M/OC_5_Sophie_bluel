@@ -289,7 +289,45 @@ document.getElementById("open-add-photo-modal").addEventListener("click", (e) =>
   openSecondModal();  
 });
 
+/* *** Recupère les catégories modal 2*** */
+async function fetchCategories() {
+  try {
+    const response = await fetch("http://localhost:5678/api/categories");
+    if (!response.ok) {
+      throw new Error(`Erreur API : ${response.status} ${response.statusText}`);
+    }
+    const categories = await response.json();
+    
+    // Appel de la fonction pour injecter les catégories dans le formulaire
+    populateCategorySelect(categories);
 
+  } catch (error) {
+    console.error("Erreur lors de la récupération des catégories :", error);
+    alert(
+      "Impossible de récupérer les catégories. Vérifiez que le serveur est en cours de fonctionnement."
+    );
+  }
+}
+
+// Fonction pour injecter les catégories dans le champ select du formulaire
+function populateCategorySelect(categories) {
+  const categorySelect = document.getElementById("category");
+  categorySelect.innerHTML = ""; 
+
+  const defaultOption = document.createElement("option");
+  defaultOption.textContent = "Sélectionner une catégorie";
+  defaultOption.value = "";
+  categorySelect.appendChild(defaultOption);
+
+  categories.forEach(category => {
+    const option = document.createElement("option");
+    option.value = category.id; 
+    option.textContent = category.name;
+    categorySelect.appendChild(option);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", fetchCategories);
 
 document.addEventListener("DOMContentLoaded", async () => {
   const works = await fetchWorks();
