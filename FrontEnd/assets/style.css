@@ -308,7 +308,8 @@ aside button {
 .js-modal-close{
     background: none !important;
     border: none !important;
-    color: #000 !important;   
+    color: #000 !important;  
+    font-size: 20px; 
 }
 .modal {
     position: fixed;
@@ -325,13 +326,13 @@ aside button {
     background: #fff;
     overflow: auto;
     width: 600px;
-    padding: 30px 100px;
     max-width: calc(100vw - 20px);
     max-height: calc(100vh - 20px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 10px 0 30px;
 }
 button-trash {
     color: #fff;
@@ -350,7 +351,7 @@ button-trash {
   .container-photo img {
     display: block;
     max-width: 100%;
-    border-radius: 5px; 
+  
   }
 .gallery {
     width: 100%;
@@ -366,17 +367,111 @@ button-trash {
 }
 /** Gallery photo modal**/
 .container-photo {
-    width: 100%;
+    width: 70%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 20px;
     margin: 30px auto;
-    border-bottom: 2px solid #B3B3B3;
-    padding-bottom: 50px;
+    border-bottom: 1px solid #B3B3B3;
+    padding: 30px 0 50px;
 }
 .container-photo img {
     width: 100%;
+}
+
+/*** Modal 2 ****/
+#modal2 .container-button-close {
+    justify-content: space-between;
+}
+#modal2 .modal-previous {
+    background: none !important;
+    border: none !important;
+    color: #000 !important;
+    font-size: 20px;
+}
+#modal2 h3 {
+    margin-bottom: 30px;
+}
+
+#modal2 form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 420px;
+}
+
+#modal2 .ajout-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #E8F1F6;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    width: 420px;
+    height: 169px;
+}
+#modal2 .fa-image {
+    font-size: 70px;
+    color: #B9C5CC
+}
+.ajout-photo input[type="file"] {
+    display: none;
+}
+
+/* Style du bouton personnalisé */
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 173px;
+    height: 36px;
+    background-color: #CBD6DC;
+    color: #306685;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+}
+#modal2 form span {
+    border: 1px solid #B3B3B3;
+    width: 420px;
+    margin-top: 30px;
+}
+/* Effet au survol */
+.custom-file-upload:hover {
+    background-color: #b0c4ce; /* Légère variation pour l'effet hover */
+}
+.ajout-photo p {
+    font-size: 10px;
+}
+#modal2 .container-input label {
+    font-weight: 500;
+    font-size: 14px;
+}
+#modal2 .container-input {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+#modal2 .container-input input, select{
+    border: none;
+    box-shadow: 0px 4px 14px 0px #00000017;
+    height: 51px;
+}
+#modal2 .container-input select {
+    color: #6C6C6C;
 }
 
 /*** Formulaire***/

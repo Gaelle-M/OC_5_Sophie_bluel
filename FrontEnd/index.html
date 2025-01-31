@@ -64,16 +64,25 @@
 	   <aside id="modal2" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal" style="display:none;">
 		<div class="modal-wrapper js-modal-stop">
 			<div class="container-button-close">
+				<button class="modal-previous"><i class="fa-solid fa-arrow-left"></i></button>
 				<button class="js-modal-close" id="close-modal-2"><i class="fa-solid fa-xmark"></i></button>
 		    </div>
 			<h3 id="titlemodal">Ajout photo</h3>
 			<form id="add-photo-form">
-				<input type="file" id="image" name="image" accept="image/png, image/jpeg" required />
-				<label for="title">Titre</label>
-				<input type="text" name="title" id="title" required />
-				<label for="category">Catégorie</label>
-				<select name="category" id="category" required>
-				</select>
+				<div class="ajout-photo">
+				  <i class="fa-regular fa-image"></i>
+				  <label for="image" class="custom-file-upload">+ Ajouter photo</label>
+                  <input type="file" id="image" name="image" accept="image/png, image/jpeg" required />
+				  <p>jpg, png : 4mo max</p>
+			    </div>
+				<div class="container-input">
+				  <label for="title">Titre</label>
+				  <input type="text" name="title" id="title" required />
+				  <label for="category">Catégorie</label>
+				  <select name="category" id="category" required>
+				  </select>
+			    </div>  
+				<span></span>
 				<button type="submit">Valider</button>
 			  </form>
 		</div>
