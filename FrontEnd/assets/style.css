@@ -299,6 +299,7 @@ aside button {
     font-weight: 700;
     display: flex;
     justify-content: center;
+    width: 237px;
 }
 .container-button-close {
     width: 100%;
@@ -332,7 +333,7 @@ aside button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10px 0 30px;
+    padding: 10px 0 20px;
 }
 button-trash {
     color: #fff;
@@ -342,7 +343,6 @@ button-trash {
     border-radius: 5px;
     cursor: pointer;
   }
-  
   
   .container-photo figure {
     position: relative;
@@ -391,7 +391,7 @@ button-trash {
     font-size: 20px;
 }
 #modal2 h3 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #modal2 form {
@@ -461,7 +461,7 @@ button-trash {
     justify-content: center;
     width: 100%;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     position: relative;
 }
 
